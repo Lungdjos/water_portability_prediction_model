@@ -1,4 +1,5 @@
 import pandas as pd
+from sklearn.preprocessing import StandardScaler
 
 # Load data from CSV
 data_set = pd.read_csv('water_portability.csv')
@@ -12,3 +13,8 @@ print(X.isnull().sum())
 
 # Impute missing values with mean
 X = X.fillna(X.mean())
+
+
+# Standardize features
+scaler = StandardScaler()
+X = scaler.fit_transform(X)

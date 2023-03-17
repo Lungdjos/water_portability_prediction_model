@@ -9,3 +9,6 @@ y = data_set['Potability']
 
 # Check for missing values
 print(X.isnull().sum())
+
+# Impute missing values with mean
+X = X.fillna(X.mean())

@@ -1,3 +1,14 @@
+''' 
+        ****POWERHACKS HACKATHON****
+    Name:   Lungu David
+    Contact: lungudjos53s@gmail.com
+    Problem: Water Portability in Africa
+    Stream: AI and Machine Learning(Python)
+    Org:    PLP Cohort 3
+    Ack:    Most of the code was learnt while implementing the solution from multiple site.
+    Date:   from 15-03-2023 to 18-03-2023
+'''
+
 from flask import Flask, request, jsonify
 import joblib
 

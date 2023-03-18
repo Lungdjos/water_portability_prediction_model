@@ -1,4 +1,5 @@
 import pandas as pd
+import joblib
 from sklearn.preprocessing import StandardScaler
 # imports for model creation
 from sklearn.ensemble import RandomForestClassifier
@@ -75,3 +76,8 @@ test_accuracy = best_r_forest_classifier.score(X_test, y_test)
 
 # printing the accuracy of the test set
 print("Test accuracy is: {:.3f}".format(test_accuracy))
+
+# SAVING THE MODEL
+
+joblib.dump(best_r_forest_classifier, 'best_model.joblib')
+

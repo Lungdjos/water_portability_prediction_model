@@ -61,7 +61,7 @@ parameter_grid = {
 r_forest_classifier = RandomForestClassifier(random_state=42)
 
 # performing grid search cross-validation to find the best classified hyperparameters
-grid_search_cross_validation = GridSearchCV(estimator=r_forest_classifier, parameter_grid=parameter_grid,
+grid_search_cross_validation = GridSearchCV(estimator=r_forest_classifier, param_grid=parameter_grid,
                                              cv=5, n_jobs=-1, verbose=2)
 
 # fitting the model with the best hyperparameter values

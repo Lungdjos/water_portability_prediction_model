@@ -56,6 +56,12 @@ parameter_grid = {
     'min_samples_leaf': [1, 2, 4]
 }
 
-# using the random forest to train the model
+# using the random forest to create a random forest classifier object
 r_forest_classifier = RandomForestClassifier(random_state=42)
 
+# performing grid search cross-validation to find the best classified hyperparameters
+grid_search_cross_validation = GridSearchCV(estimator=r_forest_classifier, parameter_grid=parameter_grid,
+                                             cv=5, n_jobs=-1, verbose=2)
+
+# fitting the model with the best hyperparameter values
+grid_search_cross_validation.fit(X_train, y_train)

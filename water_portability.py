@@ -75,7 +75,7 @@ grid_search_cross_validation = GridSearchCV(estimator=r_forest_classifier, param
 grid_search_cross_validation.fit(X_train, y_train)
 
 # printing the best hyperparameter values found in the search
-print("Best hyperparameter values are:", grid_search_cross_valid.best_params_)
+print("Best hyperparameter values are:", grid_search_cross_validation.best_params_)
 
 # best model evaluation results on test sets
 best_r_forest_classifier =grid_search_cross_validation.best_estimator_

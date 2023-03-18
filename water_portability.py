@@ -48,10 +48,14 @@ print('Testing Accuracy:', random_forest_classifier.score(X_test, y_test))
 # split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(data_set.iloc[:, :-1], data_set.iloc[:, -1], test_size=0.15, random_state=42)
 
-# Define the parameter grid for the grid search
-param_grid = {
+# define the parameter grid for the grid search
+parameter_grid = {
     'n_estimators': [100, 200, 500],
     'max_depth': [5, 10, 20, None],
     'min_samples_split': [2, 5, 10],
     'min_samples_leaf': [1, 2, 4]
 }
+
+# using the random forest to train the model
+r_forest_classifier = RandomForestClassifier(random_state=42)
+

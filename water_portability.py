@@ -6,6 +6,8 @@ from sklearn.ensemble import RandomForestClassifier
 
 from sklearn.model_selection import GridSearchCV, train_test_split
 
+from sklearn.impute import SimpleImputer
+
 # soad data from CSV
 data_set = pd.read_csv("D:\Work_Project\water_portability_prediction_model\water_potability.csv")
 # DATA PREPROCESSING
@@ -48,6 +50,11 @@ print('Testing Accuracy:', random_forest_classifier.score(X_test, y_test))
 
 # split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(data_set.iloc[:, :-1], data_set.iloc[:, -1], test_size=0.15, random_state=42)
+
+# replacing the missing values with the mean of each column
+imputer = SimpleImputer()
+X_train = imputer.fit_transform(X_train)
+X_test = imputer.transform(X_test)
 
 # define the parameter grid for the grid search
 parameter_grid = {

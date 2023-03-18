@@ -14,15 +14,20 @@ y = data_set['Potability']
 # Check for missing values
 print(X.isnull().sum())
 
-# Impute missing values with mean
+# impute missing values with mean
 X = X.fillna(X.mean())
 
 
-# Standardize features
+# standardizing the features of the data set
 scaler = StandardScaler()
 X = scaler.fit_transform(X)
 
 # at this point the data preprocessing is done. we now create the model using Random Forest Algorithm
 
-# Split data into training and testing sets
+# split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=42)
+
+# training the model using the training data set with the RandomForest Classifier method
+random_forest_classifier = RandomForestClassifier(random_state=42)
+# fitting the model
+random_forest_classifier.fit(X_train, y_train)

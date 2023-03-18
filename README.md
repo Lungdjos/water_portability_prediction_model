@@ -31,8 +31,9 @@ Organic_carbon       0
 Trihalomethanes    162
 Turbidity            0
 dtype: int64
-Training Accuracy: 1.0
-Testing Accuracy: 0.6829268292682927
+
+# Training Accuracy: 1.0
+# Testing Accuracy: 0.6829268292682927
 After training and obtaining the results above, the model will be optimized to have the best accuracy.
 
 The test accuracy after optimization of the model has reduced to:

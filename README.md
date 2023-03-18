@@ -1,4 +1,5 @@
 # water_portability_prediction_model
+
 Water portability prediction
 
 # HERE IS WHAT YOU NEED TO KNOW
@@ -7,20 +8,18 @@ The water_portability_prediction_model helps you determine the water portability
 
 To create this model for predicting the portability field, we performed some data preprocessing and then use machine learning techniques to build a predictive model.
 
-First, loading the data from the CSV file and splitting it into features (independent variables) and labels (dependent variable). We standardized the features to ensure that they are on the same scale.
+First, loading the data from the CSV file and splitting it into features (independent variables) and labels (dependent variable). We standardized the features to ensure that they are on the same scale. The splitting ration of the data set for training and testing is 85:15 respectively.
 Secondly, after preprocessing the data, we built a predictive model using the Random Forest Classifier algorithm. We then evaluated the model.
 Lastly, we went further optimize the model by tuning hyperparameters and performing feature selection. This involves selection of relevant features of the data in the data set to improve the performance of the model. Under optimization, we have the following steps that have been implemented: 1. Data preprocessing 2. Feature selection 3. Model selection 4. Model tuning 5. Cross-validation 6. Model evaluation
 
-
 # Requirements
+
 To run this file and generate the trained model the following libraries must be installed
 pandas
 scikit-learn
 
-
-
-
 # OUTPUT RESULTS
+
 The first training of the model with 15% testing data set produced the following results:
 ph                 491
 Hardness             0
@@ -36,8 +35,10 @@ Training Accuracy: 1.0
 Testing Accuracy: 0.6829268292682927
 After training and obtaining the results above, the model will be optimized to have the best accuracy.
 
-The test accuracy after optimizating the model has reduced to:
-# Optimization of the model took about 20mins to split and optimize.
+The test accuracy after optimization of the model has reduced to:
+
+# Optimization of the model took about 20mins to split and optimize
+
 Fitting 5 folds for each of 108 candidates, totalling 540 fits
 [CV] END max_depth=5, min_samples_leaf=1, min_samples_split=2, n_estimators=100; total time=   2.2s
 [CV] END max_depth=5, min_samples_leaf=1, min_samples_split=2, n_estimators=100; total time=   2.1s
@@ -580,4 +581,5 @@ Fitting 5 folds for each of 108 candidates, totalling 540 fits
 [CV] END max_depth=None, min_samples_leaf=4, min_samples_split=10, n_estimators=500; total time=  12.6s
 [CV] END max_depth=None, min_samples_leaf=4, min_samples_split=10, n_estimators=500; total time=  10.5s
 Best hyperparameter values are: {'max_depth': 20, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 100}
+
 # Test accuracy is: 0.667

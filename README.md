@@ -1,13 +1,26 @@
 # water_portability_prediction_model
 Water portability prediction
+
+# HERE IS WHAT YOU NEED TO KNOW
+
+The water_portability_prediction_model helps you determine the water portability from the data that you provide. A piece of code for deployment of the trained model will be available in the code section.
+
+To create this model for predicting the portability field, we performed some data preprocessing and then use machine learning techniques to build a predictive model.
+
+First, loading the data from the CSV file and splitting it into features (independent variables) and labels (dependent variable). We standardized the features to ensure that they are on the same scale.
+Secondly, after preprocessing the data, we built a predictive model using the Random Forest Classifier algorithm. We then evaluated the model.
+Lastly, we went further optimize the model by tuning hyperparameters and performing feature selection. This involves selection of relevant features of the data in the data set to improve the performance of the model. Under optimization, we have the following steps that have been implemented: 1. Data preprocessing 2. Feature selection 3. Model selection 4. Model tuning 5. Cross-validation 6. Model evaluation
+
+
+# Requirements
 To run this file and generate the trained model the following libraries must be installed
 pandas
 scikit-learn
-image.png
 
 
 
 
+# OUTPUT RESULTS
 The first training of the model with 15% testing data set produced the following results:
 ph                 491
 Hardness             0

@@ -29,5 +29,10 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random
 
 # training the model using the training data set with the RandomForest Classifier method
 random_forest_classifier = RandomForestClassifier(random_state=42)
+
 # fitting the model
 random_forest_classifier.fit(X_train, y_train)
+
+# evaluating the model's performance
+print('Training Accuracy:', random_forest_classifier.score(X_train, y_train))
+print('Testing Accuracy:', random_forest_classifier.score(X_test, y_test))
